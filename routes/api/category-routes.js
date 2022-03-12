@@ -50,10 +50,12 @@ router.put("/:id", async (req, res) => {
     const categoryData = await Category.update(req.body, {
       where: {
         id: req.params.id,
-      }
+      },
     });
     if (!categoryData) {
-      res.status(404).json({ message: "Category with this id does not exist!" });
+      res
+        .status(404)
+        .json({ message: "Category with this id does not exist!" });
       return;
     }
     res.status(200).json(categoryData);
@@ -67,10 +69,12 @@ router.delete("/:id", async (req, res) => {
     const categoryData = await Category.destroy({
       where: {
         id: req.params.id,
-      }
+      },
     });
     if (!categoryData) {
-      res.status(404).json({ message: "Category with this id does not exist!" });
+      res
+        .status(404)
+        .json({ message: "Category with this id does not exist!" });
       return;
     }
     res.status(200).json(categoryData);
