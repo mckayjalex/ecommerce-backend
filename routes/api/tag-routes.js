@@ -1,3 +1,4 @@
+// Import
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
@@ -16,6 +17,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err)
   }
 });
+
 // /api/tags/:id GET
 router.get('/:id', async (req, res) => {
   try {
@@ -35,6 +37,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err)
   }
 });
+
 // /api/tags/ POST
 router.post('/', async (req, res) => {
   try {
@@ -44,6 +47,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   } 
 });
+
 // /api/tags/:id PUT
 router.put('/:id', async (req, res) => {
   try {
@@ -61,6 +65,7 @@ router.put('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // /api/tags/:id DELETE
 router.delete('/:id', async (req, res) => {
   try {
@@ -79,4 +84,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Export router
 module.exports = router;

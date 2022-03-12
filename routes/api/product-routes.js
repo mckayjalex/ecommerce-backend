@@ -1,3 +1,4 @@
+// Import 
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
 
@@ -15,7 +16,7 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-    res.status(220).json(productData);
+    res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -110,6 +111,7 @@ router.put("/:id", (req, res) => {
       res.status(400).json(err);
     });
 });
+
 // /api/products/:id DELETE
 router.delete("/:id", async (req, res) => {
   try {
@@ -128,4 +130,5 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// Export router
 module.exports = router;
