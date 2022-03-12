@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
       ]
     })
     if (!tagData) {
-      res.status(404).json({message: "Tag with this ID does not exist!"});
+      res.status(404).json({message: "No Tag found with this ID!"});
       return;
     }
     res.status(200).json(tagData);
@@ -57,7 +57,7 @@ router.put('/:id', async (req, res) => {
       }
     })
     if (!tagData) {
-      res.status(404).json({message: "Tag with this ID does not exist!"});
+      res.status(404).json({message: "No Tag found with this ID!"});
       return;
     }
     res.status(200).json(tagData);
@@ -75,7 +75,7 @@ router.delete('/:id', async (req, res) => {
       }
     })
     if (!tagData) {
-      res.status(404).json({message: "Tag with this ID does not exist!"});
+      res.status(404).json({message: "No Tag found with this ID!"});
       return;
     }
     res.status(200).json(tagData);

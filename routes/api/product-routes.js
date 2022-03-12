@@ -37,7 +37,7 @@ router.get("/:id", async (req, res) => {
       ],
     });
     if (!productData) {
-      res.status(400).json({message: 'No Product exitsts with that ID!'});
+      res.status(400).json({message: "No Product found with this ID!"});
       return;
     }
     res.status(200).json(productData);
@@ -121,7 +121,7 @@ router.delete("/:id", async (req, res) => {
       }
     })
     if (!productData) {
-      res.status(404).json({message: "Product with that ID does not exist!"});
+      res.status(404).json({message: "No Product found with this ID!"});
       return;
     }
     res.status(200).json(productData);

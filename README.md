@@ -41,7 +41,7 @@ A list of technologies used within the project:
 
 ## Installation
 ***
-To install an use this app please run the below in your CLI.
+To install and use this app please run the below in your CLI.
 ```
 $ cd /Users/chaz/Bootcamp/week13/ecommerce-backend/server.js
 $ npm install
